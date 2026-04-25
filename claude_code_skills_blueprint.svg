@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="'Courier New', monospace">
+  <defs>
+    <!-- Blueprint grid pattern -->
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a3a5c" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#1f4a7a" stroke-width="1"/>
+    </pattern>
+    <!-- Handwritten-style filter -->
+    <filter id="roughen">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="5" result="noise" seed="2"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sketch">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Glow effect for highlights -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Blueprint background -->
+  <rect width="1200" height="900" fill="#0d2137"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+
+  <!-- Outer border - double line blueprint style -->
+  <rect x="15" y="15" width="1170" height="870" fill="none" stroke="#4a9fd4" stroke-width="2" filter="url(#sketch)"/>
+  <rect x="22" y="22" width="1156" height="856" fill="none" stroke="#4a9fd4" stroke-width="0.8" filter="url(#sketch)"/>
+
+  <!-- Corner marks -->
+  <line x1="15" y1="55" x2="55" y2="55" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="55" y1="15" x2="55" y2="55" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1145" y1="55" x2="1185" y2="55" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1145" y1="15" x2="1145" y2="55" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="15" y1="845" x2="55" y2="845" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="55" y1="845" x2="55" y2="885" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1145" y1="845" x2="1185" y2="845" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1145" y1="845" x2="1145" y2="885" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <!-- Title block -->
+  <rect x="200" y="30" width="800" height="68" fill="none" stroke="#4a9fd4" stroke-width="1.2" filter="url(#sketch)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#a8d8f0" font-size="22" font-weight="bold" letter-spacing="4" filter="url(#roughen)">TOP CLAUDE CODE SKILLS — 2026</text>
+  <text x="600" y="82" text-anchor="middle" fill="#5ba8d4" font-size="11" letter-spacing="6">ANALYSIS BLUEPRINT  ·  TRENDING VIDEO SYNTHESIS  ·  REV 1.0</text>
+
+  <!-- Subtitle annotation line -->
+  <line x1="100" y1="110" x2="1100" y2="110" stroke="#4a9fd4" stroke-width="0.8" stroke-dasharray="6,4" filter="url(#sketch)"/>
+  <text x="600" y="125" text-anchor="middle" fill="#5ba8d4" font-size="10" letter-spacing="3">5 CORE SKILL DOMAINS  ·  EXTRACTED FROM YOUTUBE TRENDING + DOCUMENTATION RESEARCH</text>
+  <line x1="100" y1="132" x2="1100" y2="132" stroke="#4a9fd4" stroke-width="0.8" stroke-dasharray="6,4" filter="url(#sketch)"/>
+
+  <!-- ===== SKILL 1: Skills & Slash Commands ===== -->
+  <rect x="40" y="150" width="340" height="220" fill="none" stroke="#4a9fd4" stroke-width="1.5" filter="url(#sketch)"/>
+  <rect x="40" y="150" width="340" height="28" fill="#0e2d4a"/>
+  <text x="210" y="169" text-anchor="middle" fill="#a8d8f0" font-size="13" font-weight="bold" letter-spacing="2" filter="url(#roughen)">① SKILLS &amp; SLASH COMMANDS</text>
+
+  <!-- Circuit dot decoration -->
+  <circle cx="55" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+  <circle cx="365" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <text x="56" y="200" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ SKILL.md defines reusable behaviors</text>
+  <text x="56" y="218" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Auto-invoked OR manually via /name</text>
+  <text x="56" y="236" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Lives in .claude/skills/ directory</text>
+  <text x="56" y="254" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Supports helper scripts + frontmatter</text>
+  <text x="56" y="272" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Powers marketplace &amp; plugin ecosystem</text>
+
+  <!-- Key built-ins list -->
+  <line x1="56" y1="284" x2="368" y2="284" stroke="#1f4a7a" stroke-width="1"/>
+  <text x="56" y="298" fill="#5ba8d4" font-size="9" letter-spacing="1">BUILT-IN:  /simplify  /review  /debug  /loop</text>
+  <text x="56" y="314" fill="#5ba8d4" font-size="9" letter-spacing="1">/claude-api  /security-review  /schedule</text>
+  <text x="56" y="330" fill="#5ba8d4" font-size="9" letter-spacing="1">/init  /ultrareview  /batch</text>
+
+  <!-- measurement annotation -->
+  <line x1="390" y1="150" x2="390" y2="370" stroke="#2a5a8a" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <text x="397" y="265" fill="#2a5a8a" font-size="8" transform="rotate(-90,397,265)">EXTENSIBILITY LAYER</text>
+
+  <!-- ===== SKILL 2: MCP Servers ===== -->
+  <rect x="430" y="150" width="340" height="220" fill="none" stroke="#4a9fd4" stroke-width="1.5" filter="url(#sketch)"/>
+  <rect x="430" y="150" width="340" height="28" fill="#0e2d4a"/>
+  <text x="600" y="169" text-anchor="middle" fill="#a8d8f0" font-size="13" font-weight="bold" letter-spacing="2" filter="url(#roughen)">② MCP SERVERS</text>
+  <circle cx="445" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+  <circle cx="755" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <text x="446" y="200" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Model Context Protocol connections</text>
+  <text x="446" y="218" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Links Claude to external tools &amp; APIs</text>
+  <text x="446" y="236" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Each server exposes slash commands</text>
+  <text x="446" y="254" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Format: /mcp__[server]__[prompt]</text>
+  <text x="446" y="272" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ 50+ best MCP servers catalogued (2026)</text>
+
+  <line x1="446" y1="284" x2="758" y2="284" stroke="#1f4a7a" stroke-width="1"/>
+  <text x="446" y="298" fill="#5ba8d4" font-size="9" letter-spacing="1">POPULAR:  GitHub  Slack  Notion  Figma</text>
+  <text x="446" y="314" fill="#5ba8d4" font-size="9" letter-spacing="1">PlanetScale  Remotion  Jira  Linear</text>
+  <text x="446" y="330" fill="#5ba8d4" font-size="9" letter-spacing="1">Configured via /mcp in session</text>
+
+  <!-- ===== SKILL 3: Hooks ===== -->
+  <rect x="820" y="150" width="340" height="220" fill="none" stroke="#4a9fd4" stroke-width="1.5" filter="url(#sketch)"/>
+  <rect x="820" y="150" width="340" height="28" fill="#0e2d4a"/>
+  <text x="990" y="169" text-anchor="middle" fill="#a8d8f0" font-size="13" font-weight="bold" letter-spacing="2" filter="url(#roughen)">③ HOOKS</text>
+  <circle cx="835" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+  <circle cx="1145" cy="165" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <text x="836" y="200" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Scripts firing at lifecycle events</text>
+  <text x="836" y="218" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Pre/post tool calls, session start/end</text>
+  <text x="836" y="236" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ DETERMINISTIC — not advisory</text>
+  <text x="836" y="254" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Like Git hooks but for Claude Code</text>
+  <text x="836" y="272" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Configured in settings.json</text>
+
+  <line x1="836" y1="284" x2="1148" y2="284" stroke="#1f4a7a" stroke-width="1"/>
+  <text x="836" y="298" fill="#5ba8d4" font-size="9" letter-spacing="1">EVENTS:  PreToolCall  PostToolCall</text>
+  <text x="836" y="314" fill="#5ba8d4" font-size="9" letter-spacing="1">SessionStart  SessionStop  Stop</text>
+  <text x="836" y="330" fill="#5ba8d4" font-size="9" letter-spacing="1">Guarantees action happens every time</text>
+
+  <!-- ===== CENTRAL DIAGRAM: Architecture wheel ===== -->
+  <!-- Center hub -->
+  <circle cx="600" cy="555" r="80" fill="#061628" stroke="#4a9fd4" stroke-width="2" filter="url(#sketch)"/>
+  <circle cx="600" cy="555" r="68" fill="none" stroke="#1f4a7a" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="600" y="547" text-anchor="middle" fill="#a8d8f0" font-size="14" font-weight="bold" filter="url(#roughen)">CLAUDE</text>
+  <text x="600" y="563" text-anchor="middle" fill="#a8d8f0" font-size="14" font-weight="bold" filter="url(#roughen)">CODE</text>
+  <text x="600" y="579" text-anchor="middle" fill="#5ba8d4" font-size="9">CORE ENGINE</text>
+
+  <!-- Spokes to skill domains -->
+  <line x1="600" y1="475" x2="600" y2="415" stroke="#4a9fd4" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sketch)"/>
+  <line x1="530" y1="500" x2="445" y2="450" stroke="#4a9fd4" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sketch)"/>
+  <line x1="670" y1="500" x2="755" y2="450" stroke="#4a9fd4" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sketch)"/>
+  <line x1="530" y1="610" x2="440" y2="660" stroke="#4a9fd4" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sketch)"/>
+  <line x1="670" y1="610" x2="760" y2="660" stroke="#4a9fd4" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sketch)"/>
+
+  <!-- Spoke dots -->
+  <circle cx="600" cy="415" r="5" fill="#4a9fd4" filter="url(#glow)"/>
+  <circle cx="445" cy="450" r="5" fill="#4a9fd4" filter="url(#glow)"/>
+  <circle cx="755" cy="450" r="5" fill="#4a9fd4" filter="url(#glow)"/>
+  <circle cx="440" cy="660" r="5" fill="#4a9fd4" filter="url(#glow)"/>
+  <circle cx="760" cy="660" r="5" fill="#4a9fd4" filter="url(#glow)"/>
+
+  <!-- Top spoke label -->
+  <text x="600" y="408" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="1">PLAN MODE</text>
+
+  <!-- ===== SKILL 4: Agent Teams & Subagents ===== -->
+  <rect x="40" y="400" width="370" height="230" fill="none" stroke="#4a9fd4" stroke-width="1.5" filter="url(#sketch)"/>
+  <rect x="40" y="400" width="370" height="28" fill="#0e2d4a"/>
+  <text x="225" y="419" text-anchor="middle" fill="#a8d8f0" font-size="13" font-weight="bold" letter-spacing="2" filter="url(#roughen)">④ AGENT TEAMS &amp; SUBAGENTS</text>
+  <circle cx="55" cy="415" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+  <circle cx="395" cy="415" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <text x="56" y="450" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Subagents: isolated task contexts</text>
+  <text x="56" y="468" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Agent Teams: collaborative squads</text>
+  <text x="56" y="486" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Launched Feb 5, 2026 — newest feature</text>
+  <text x="56" y="504" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Multiple Claude sessions coordinate</text>
+  <text x="56" y="522" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Lead agent + teammate agents talk</text>
+
+  <line x1="56" y1="534" x2="398" y2="534" stroke="#1f4a7a" stroke-width="1"/>
+  <text x="56" y="548" fill="#5ba8d4" font-size="9" letter-spacing="1">SUBAGENT: boss → worker model</text>
+  <text x="56" y="564" fill="#5ba8d4" font-size="9" letter-spacing="1">TEAM: peer-to-peer direct messaging</text>
+  <text x="56" y="580" fill="#5ba8d4" font-size="9" letter-spacing="1">USE: parallel workloads, specialization</text>
+  <text x="56" y="596" fill="#5ba8d4" font-size="9" letter-spacing="1">⚡ Most ambitious 2026 extension point</text>
+
+  <!-- Annotation arrow -->
+  <path d="M 420 510 L 435 510 L 435 460 L 445 450" fill="none" stroke="#2a5a8a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="425" y="490" fill="#2a5a8a" font-size="7">ref</text>
+
+  <!-- ===== SKILL 5: Plan Mode & Best Practices ===== -->
+  <rect x="790" y="400" width="370" height="230" fill="none" stroke="#4a9fd4" stroke-width="1.5" filter="url(#sketch)"/>
+  <rect x="790" y="400" width="370" height="28" fill="#0e2d4a"/>
+  <text x="975" y="419" text-anchor="middle" fill="#a8d8f0" font-size="13" font-weight="bold" letter-spacing="2" filter="url(#roughen)">⑤ PLAN MODE &amp; BEST PRACTICES</text>
+  <circle cx="805" cy="415" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+  <circle cx="1145" cy="415" r="4" fill="none" stroke="#4a9fd4" stroke-width="1.5"/>
+
+  <text x="806" y="450" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Plan before coding — reduces failures</text>
+  <text x="806" y="468" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Ask Claude like a senior engineer</text>
+  <text x="806" y="486" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ CLAUDE.md for persistent instructions</text>
+  <text x="806" y="504" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Git/GitHub CLI automation built-in</text>
+  <text x="806" y="522" fill="#7ec8e3" font-size="10" filter="url(#roughen)">▸ Handle commits, branches, PRs, issues</text>
+
+  <line x1="806" y1="534" x2="1148" y2="534" stroke="#1f4a7a" stroke-width="1"/>
+  <text x="806" y="548" fill="#5ba8d4" font-size="9" letter-spacing="1">WORKFLOW:  Plan → Code → Review</text>
+  <text x="806" y="564" fill="#5ba8d4" font-size="9" letter-spacing="1">USE /debug when Claude seems confused</text>
+  <text x="806" y="580" fill="#5ba8d4" font-size="9" letter-spacing="1">CLAUDE.md > memory for persistence</text>
+  <text x="806" y="596" fill="#5ba8d4" font-size="9" letter-spacing="1">⚡ Planning time = success multiplier</text>
+
+  <!-- Annotation arrow to center -->
+  <path d="M 780 420 L 765 420 L 765 450 L 755 450" fill="none" stroke="#2a5a8a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="770" y="435" fill="#2a5a8a" font-size="7">ref</text>
+
+  <!-- ===== BOTTOM SUMMARY STRIP ===== -->
+  <line x1="40" y1="650" x2="1160" y2="650" stroke="#4a9fd4" stroke-width="1" stroke-dasharray="6,4" filter="url(#sketch)"/>
+
+  <!-- Bottom skill boxes: row of 5 quick-ref badges -->
+  <rect x="40" y="665" width="215" height="80" fill="none" stroke="#1f4a7a" stroke-width="1" filter="url(#sketch)"/>
+  <text x="148" y="682" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="2">TRENDING VIDEOS</text>
+  <text x="56" y="700" fill="#4a8aaa" font-size="8">• "35 Claude Code Skills" — GitHub</text>
+  <text x="56" y="715" fill="#4a8aaa" font-size="8">• "45 Tips for Claude Code" — ykdojo</text>
+  <text x="56" y="730" fill="#4a8aaa" font-size="8">• "Ultimate Claude Code Guide"</text>
+
+  <rect x="270" y="665" width="215" height="80" fill="none" stroke="#1f4a7a" stroke-width="1" filter="url(#sketch)"/>
+  <text x="378" y="682" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="2">SKILL ECOSYSTEM</text>
+  <text x="286" y="700" fill="#4a8aaa" font-size="8">• .claude/skills/ directory</text>
+  <text x="286" y="715" fill="#4a8aaa" font-size="8">• Marketplace via /plugin</text>
+  <text x="286" y="730" fill="#4a8aaa" font-size="8">• awesome-claude-code (GitHub)</text>
+
+  <rect x="500" y="665" width="200" height="80" fill="none" stroke="#1f4a7a" stroke-width="1" filter="url(#sketch)"/>
+  <text x="600" y="682" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="2">KEY INSIGHT</text>
+  <text x="516" y="700" fill="#4a8aaa" font-size="8">Skills + MCP + Hooks + Agents</text>
+  <text x="516" y="715" fill="#4a8aaa" font-size="8">= Full-stack Claude automation</text>
+  <text x="516" y="730" fill="#4a8aaa" font-size="8">No code expertise required</text>
+
+  <rect x="715" y="665" width="215" height="80" fill="none" stroke="#1f4a7a" stroke-width="1" filter="url(#sketch)"/>
+  <text x="823" y="682" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="2">GROWTH DOMAINS</text>
+  <text x="731" y="700" fill="#4a8aaa" font-size="8">• Content creation &amp; video tools</text>
+  <text x="731" y="715" fill="#4a8aaa" font-size="8">• Design automation (April 2026)</text>
+  <text x="731" y="730" fill="#4a8aaa" font-size="8">• Business &amp; monetization</text>
+
+  <rect x="945" y="665" width="215" height="80" fill="none" stroke="#1f4a7a" stroke-width="1" filter="url(#sketch)"/>
+  <text x="1053" y="682" text-anchor="middle" fill="#5ba8d4" font-size="9" letter-spacing="2">RESOURCES</text>
+  <text x="961" y="700" fill="#4a8aaa" font-size="8">• code.claude.com/docs</text>
+  <text x="961" y="715" fill="#4a8aaa" font-size="8">• github.com/ykdojo/claude-code-tips</text>
+  <text x="961" y="730" fill="#4a8aaa" font-size="8">• builder.io 50 tips guide</text>
+
+  <!-- ===== FOOTER TITLE BLOCK ===== -->
+  <rect x="40" y="760" width="1120" height="50" fill="none" stroke="#4a9fd4" stroke-width="1" filter="url(#sketch)"/>
+  <line x1="300" y1="760" x2="300" y2="810" stroke="#4a9fd4" stroke-width="0.8"/>
+  <line x1="700" y1="760" x2="700" y2="810" stroke="#4a9fd4" stroke-width="0.8"/>
+  <line x1="950" y1="760" x2="950" y2="810" stroke="#4a9fd4" stroke-width="0.8"/>
+
+  <text x="170" y="779" text-anchor="middle" fill="#5ba8d4" font-size="8" letter-spacing="2">DRAWN BY</text>
+  <text x="170" y="797" text-anchor="middle" fill="#7ec8e3" font-size="10" filter="url(#roughen)">Claude Code — Sonnet 4.6</text>
+
+  <text x="500" y="779" text-anchor="middle" fill="#5ba8d4" font-size="8" letter-spacing="2">PROJECT</text>
+  <text x="500" y="797" text-anchor="middle" fill="#7ec8e3" font-size="10" filter="url(#roughen)">Claude Code Skills Analysis Blueprint</text>
+
+  <text x="825" y="779" text-anchor="middle" fill="#5ba8d4" font-size="8" letter-spacing="2">DATE</text>
+  <text x="825" y="797" text-anchor="middle" fill="#7ec8e3" font-size="10" filter="url(#roughen)">APRIL 2026</text>
+
+  <text x="1045" y="779" text-anchor="middle" fill="#5ba8d4" font-size="8" letter-spacing="2">SHEET</text>
+  <text x="1045" y="797" text-anchor="middle" fill="#7ec8e3" font-size="10" filter="url(#roughen)">1 OF 1</text>
+
+  <!-- Decorative measurement ticks on borders -->
+  <line x1="200" y1="15" x2="200" y2="22" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="400" y1="15" x2="400" y2="22" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="600" y1="15" x2="600" y2="22" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="800" y1="15" x2="800" y2="22" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="1000" y1="15" x2="1000" y2="22" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="15" y1="225" x2="22" y2="225" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="15" y1="450" x2="22" y2="450" stroke="#4a9fd4" stroke-width="1"/>
+  <line x1="15" y1="675" x2="22" y2="675" stroke="#4a9fd4" stroke-width="1"/>
+
+  <!-- Scale bar -->
+  <line x1="1040" y1="840" x2="1140" y2="840" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1040" y1="836" x2="1040" y2="844" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1090" y1="836" x2="1090" y2="844" stroke="#4a9fd4" stroke-width="1.5"/>
+  <line x1="1140" y1="836" x2="1140" y2="844" stroke="#4a9fd4" stroke-width="1.5"/>
+  <text x="1090" y="855" text-anchor="middle" fill="#5ba8d4" font-size="8">SKILL SCALE</text>
+
+  <!-- Revision block -->
+  <text x="60" y="840" fill="#2a5a8a" font-size="8" filter="url(#roughen)">REV A — INITIAL RELEASE  |  SOURCE: YOUTUBE TRENDING + OFFICIAL DOCS + GITHUB REPOS  |  NOT FOR DISTRIBUTION</text>
+</svg>
