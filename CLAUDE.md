@@ -10,6 +10,15 @@ Claude Code project workspace for skill research, infographics, and automation e
 
 ## Project Log
 
+### 2026-04-25 — Project Skill Added
+
+**`update-project-log` skill created**
+- File: `.claude/skills/update-project-log/SKILL.md`
+- Appends timestamped entries to CLAUDE.md's Project Log, File Index, and Update Log on demand
+- Invokable via `/update-project-log` in the Claude Code CLI or automatically when logging work
+
+---
+
 ### 2026-04-25 — Initial Setup & First Deliverable
 
 **GitHub connectivity check**
@@ -61,6 +70,7 @@ Claude Code project workspace for skill research, infographics, and automation e
 | `claude_code_skills_blueprint.svg` | 2026-04-25 | Blueprint-style infographic of top Claude Code skills |
 | `.gitignore` | 2026-04-25 | Excludes `.claude/settings.local.json` and OS artifacts |
 | `CLAUDE.md` | 2026-04-25 | This file — project log and context |
+| `.claude/skills/update-project-log/SKILL.md` | 2026-04-25 | Skill: appends timestamped entries to CLAUDE.md |
 
 ---
 
@@ -70,3 +80,4 @@ Claude Code project workspace for skill research, infographics, and automation e
 |---|---|
 | 2026-04-25 00:20 | Project created, SVG infographic generated, repo pushed to GitHub |
 | 2026-04-25 00:20 | CLAUDE.md initialized with full session history |
+| 2026-04-25 | Added `update-project-log` skill at `.claude/skills/update-project-log/SKILL.md` |
