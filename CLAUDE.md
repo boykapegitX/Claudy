@@ -51,6 +51,16 @@ Claude Code project workspace for skill research, infographics, and automation e
 
 ---
 
+### 2026-05-27 — SharePoint MCP Server Scaffolded
+
+**`mcp-sharepoint/` — custom MCP server for Microsoft Graph**
+- Files: `server.py` (FastMCP with 4 tools: `search`, `recent_files`, `list_sites`, `read_file`), `requirements.txt` (mcp, msal, httpx), `.env.example`
+- Auth: MSAL device-code flow (delegated user auth), token cached in user home dir
+- `.gitignore` extended to exclude `.env`, token caches, `venv/`, `__pycache__/`
+- Pending user actions: register Entra ID app, run `python server.py --login`, then `claude mcp add sharepoint`
+
+---
+
 ## Top Claude Code Skills (Research Summary — 2026-04-25)
 
 | # | Domain | Key Points |
@@ -71,6 +81,9 @@ Claude Code project workspace for skill research, infographics, and automation e
 | `.gitignore` | 2026-04-25 | Excludes `.claude/settings.local.json` and OS artifacts |
 | `CLAUDE.md` | 2026-04-25 | This file — project log and context |
 | `.claude/skills/update-project-log/SKILL.md` | 2026-04-25 | Skill: appends timestamped entries to CLAUDE.md |
+| `mcp-sharepoint/server.py` | 2026-05-27 | Python MCP server exposing Microsoft Graph (search, recent files, sites, read file) |
+| `mcp-sharepoint/requirements.txt` | 2026-05-27 | Python deps: mcp, msal, httpx |
+| `mcp-sharepoint/.env.example` | 2026-05-27 | Template for GRAPH_CLIENT_ID / GRAPH_TENANT_ID / GRAPH_SCOPES |
 
 ---
 
@@ -81,3 +94,6 @@ Claude Code project workspace for skill research, infographics, and automation e
 | 2026-04-25 00:20 | Project created, SVG infographic generated, repo pushed to GitHub |
 | 2026-04-25 00:20 | CLAUDE.md initialized with full session history |
 | 2026-04-25 | Added `update-project-log` skill at `.claude/skills/update-project-log/SKILL.md` |
+| 2026-05-27 | Scaffolded `mcp-sharepoint/` Python MCP server for Microsoft Graph (delegated device-code auth) |
+| 2026-05-27 | Extended `.gitignore` to cover `.env`, token caches, and Python venv/cache dirs |
+| 2026-07-17 | Reviewed GitHub repo status: 3 commits on master, 2 untracked dirs (deploy-adk-agent-engine/, mcp-sharepoint/) and 2 modified files pending push |

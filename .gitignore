@@ -4,3 +4,14 @@
 # OS
 .DS_Store
 Thumbs.db
+
+# Secrets & token caches
+.env
+*.token_cache*
+.mcp_sharepoint_token_cache*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
