@@ -51,6 +51,17 @@ Claude Code project workspace for skill research, infographics, and automation e
 
 ---
 
+### 2026-07-19 — deploy-adk-agent-engine reviewed, excluded from repo
+
+**`deploy-adk-agent-engine/` — local-only, not tracked in INTEG**
+- Cloned from: https://github.com/bhancockio/deploy-adk-agent-engine
+- Purpose: Google ADK + Vertex AI agent that shortens messages
+- Contains `.env.adk-bot` with real GCP project ID and staging bucket — kept private
+- Decision: left out of the INTEG repo (nested `.git` + public repo = risk); added to `.gitignore`
+- GCP project: `project-091d3171-b530-4dfb-b87` | Bucket: `gs://adk-bot-proj` | Region: `us-central1`
+
+---
+
 ### 2026-05-27 — SharePoint MCP Server Scaffolded
 
 **`mcp-sharepoint/` — custom MCP server for Microsoft Graph**
@@ -97,3 +108,4 @@ Claude Code project workspace for skill research, infographics, and automation e
 | 2026-05-27 | Scaffolded `mcp-sharepoint/` Python MCP server for Microsoft Graph (delegated device-code auth) |
 | 2026-05-27 | Extended `.gitignore` to cover `.env`, token caches, and Python venv/cache dirs |
 | 2026-07-17 | Reviewed GitHub repo status: 3 commits on master, 2 untracked dirs (deploy-adk-agent-engine/, mcp-sharepoint/) and 2 modified files pending push |
+| 2026-07-19 | Reviewed deploy-adk-agent-engine/: cloned ADK Vertex AI bot, excluded from INTEG repo (nested .git + secrets risk), added to .gitignore |
